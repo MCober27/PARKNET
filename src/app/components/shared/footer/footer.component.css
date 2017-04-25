@@ -1,0 +1,43 @@
+/*FOOTER*/
+footer{
+  font-size: 0.8em;
+}
+/*      ENLACES      */
+/*color y decoracion*/
+.enlacesFooter{
+  color: #F0AD4E;
+  text-decoration: underline;
+}
+/*PSEUDOELEMENTOS*/
+a.enlacesFooter:visited{
+  color: #82dbf8;
+}
+a.enlacesFooter:hover{
+  color:#0b93c1;
+}
+/*     REDES SOCIALES       */
+/*Color de los iconos*/
+i{
+  color: #F0AD4E;
+}
+i:hover{
+  font-size: 2.2em;
+}
+/*PSEUDOELEMENTOS iconos sociales*/
+i.fa-facebook-square:hover{
+  color :#3b5998;
+}
+i.fa-google-plus-square:hover{
+  color:#d74a38;
+}
+i.fa-twitter-square:hover{
+  color:#54abed;
+}
+/*Margenes para iconos*/
+.marginRS{
+  margin:2% 0%;
+  text-align: center
+}
+div.col-md-2.col-sm-2.marginRS a i{
+margin-left:3%
+}

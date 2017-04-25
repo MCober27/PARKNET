@@ -1,0 +1,36 @@
+
+<!-- Template Barra de Navegacion -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <!--Boton del colapsado de la barra  navegacion  para el responsive-->
+    <button class="navbar-toggler navbar-toggler-right  bg-warning" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!--icono boton colapsado-->
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Logotipo-->
+    <a class="navbar-brand margen-navBar letraEsp tam2" [routerLink]="['inicio']"><span class="colorNar">Park</span>Net</a>
+    <!--Menu-->
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item " routerLinkActive="elegida_navBar">
+                <a class="nav-link" [routerLink]="['inicio']"><i class="fa fa-home fa-1x colorNar" aria-hidden="true"></i> INICIO</a>
+            </li>
+            <li class="nav-item" routerLinkActive="elegida_navBar">
+                <a class="nav-link" [routerLink]="['servicios']"><i class="fa fa-wrench fa-1x colorNar" aria-hidden="true"></i> SERVICIOS</a>
+            </li>
+            <li class="nav-item" routerLinkActive="elegida_navBar" [ngSwitch]="auth.authenticated()">
+                <a class="nav-link"  *ngSwitchCase ="true" [routerLink]="['sesion']"><i class="fa fa-user fa-1x colorVer" title="Sesion iniciada" aria-hidden="true"></i> SESION</a>
+                <a class="nav-link"  *ngSwitchCase ="false" [routerLink]="['sesion']"><i class="fa fa-user fa-1x colorNar" title="Inicie sesion" aria-hidden="true"></i> SESION</a>
+            </li>
+            <li class="nav-item" routerLinkActive="elegida_navBar">
+                <a class="nav-link" [routerLink]="['contacto']"><i class="fa fa-address-card-o colorNar" aria-hidden="true"></i> CONTACTO</a>
+            </li>
+        </ul>
+        <!--Deberiamos buscar algo que funcione igual-->
+        <span class="navbar-text" id="ingreso">
+          <button class="btn btn-outline-warning btn-sm btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Iniciar Sesion</button>
+          <button class="btn btn-outline-warning btn-sm btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Cerrar Sesion</button>
+        </span>
+    </div>
+</nav>

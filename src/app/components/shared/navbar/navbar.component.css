@@ -1,0 +1,19 @@
+/*NAVBAR*/
+/*Margen entre el logo y el menu*/
+.margen-navBar{
+  margin-right: 5%
+}
+div#navbarSupportedContent li.elegida_navBar{
+    background-color:#636C72;
+    color:white;
+    border-radius: 3px;
+}
+/*Al pasar sobre cada una de las opciones del navBar*/
+div#navbarSupportedContent li:hover {
+    background-color: #EA9113;
+    color:white;
+    border-radius: 3px;
+}
+li.nav-item a.nav-link:hover i{
+	color: white;
+}

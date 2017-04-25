@@ -1,0 +1,10 @@
+/*PAGINA HOME*/
+.marginCard{
+  margin:2% 3.5%;
+}
+div.card.col-md-3.marginCard img.card-img-top.img-fluid{
+	margin-top: 2%
+}
+div.card.col-md-3.marginCard:hover{
+	background-color:  #f3bd72;
+}
